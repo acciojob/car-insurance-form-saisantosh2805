@@ -2,22 +2,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Insurance Registration Form
+</title>
+
+<h1>Car Insurance Registration Form
+</h1>
    
 </head>
 <body>
 
-<h1>Car Insurance Registration Form
-</h1>
 
 <form action="submit-application" method="POST">
     
-    <!-- Text Input -->
+    <fieldset>
+    <legend>Personal Information</legend>
     <label for="name">Name <span>*</span></label>
     <input type="text" id="name" name="name" required>
     <br><br>
     <!-- Email Input -->
     <label for="email">Email <span>*</span></label>
     <input type="email" id="email" name="email" required>
+    </fieldset>
     <br><br>
  <label>Gender <span>*</span></label>
         <br>
@@ -37,20 +42,20 @@
     </select>
     <br><br>
        <label for="age"> CarAge <span>*</span></label>
-    <input type="number" id="age" name="age" required>
+    <input type="number" id="age" name="age" min="18" max="65" required>
     <br><br>
 <label for="dob">Date of purchase <span>*</span></label>
     <input type="date" id="dop" name="dop" required>
     <br><br>
    
            <label for="password">Password <span class="required-label">*</span></label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="password"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" required><br>
+<small>Password must be at least 8 characters long, contain one uppercase letter, one lowercase letter, one digit, and one special character.</small>
 <br><br>
    
     
     
-    <!-- Submit Button -->
-    <button type="submit">Submit Application</button>
+  <input type="submit" value="Submit">
 
 </form>
 
